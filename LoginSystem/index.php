@@ -38,6 +38,10 @@ require_once 'includes/signup_view.inc.php';
         </div>
         </form>
         
+        <?php
+            check_signup_errors();
+        ?>
+
             <!--Login Sysytem -->
         <h1 id="title">Login</h1> 
         <p id="description">Enter your details below to Login.</p>
@@ -59,8 +63,6 @@ require_once 'includes/signup_view.inc.php';
         </div>
         </form>
 
-        <?php
-            check_signup_errors();
-        ?>
+        
 </body>
 </html>
