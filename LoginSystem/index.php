@@ -64,7 +64,7 @@ require_once 'includes/signup_view.inc.php';
         </form>
 
         <?php
-            check_login_errors();
+        
         ?>
 
         
