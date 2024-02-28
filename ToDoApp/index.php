@@ -22,13 +22,33 @@ if(file_exists('todo.json')){
         <input type="text" name="todo_name" placeholder="Enter a new task">
         <button type="submit">Add New Task</button>
     </form>
-
+    <br>
     <?php foreach ($todos as $todoName => $todo): ?>
-        <input type='checkbox' <?php echo $todo['completed'] === 'true' ? 'checked' : '' ?> >
-        <?php echo $todoName;?>
-        <button>Delete</button><br>
-       
+        <div style="margin-bottom: 10px;">
 
+            <form style="display: inline;" action='change_status.php' method='post'>
+                <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
+                <input type='checkbox' <?php echo    $todo['completed'] === 'true' ? 'checked' : '' ?> >
+            </form>
+
+            <?php echo $todoName;?>
+
+            <form style="display: inline;" action='delete.php' method='post'>
+                <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
+                <button>Delete</button>
+            </form>
+
+        </div>
     <?php endforeach; ?>
+
+        <script>
+            const checkboxes = document.querySelectorAll("input[type=checkbox]");
+            checkboxes.forEach(ch => {
+                ch.onclick = function (){ //an arrow function would not work with "this" as it points to global object;
+                    this.parentNode.submit();
+                };
+            });
+        </script>
+
 </body>
 </html>

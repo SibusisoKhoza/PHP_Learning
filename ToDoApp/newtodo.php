@@ -4,7 +4,7 @@ This file is adding todo items to the JSON file and decode them.
 
 <?php
 echo '<pre>';
-echo var_dump($_POST);
+//echo var_dump($_POST);
 echo '/<pre>';
 
 $todoName = $_POST['todo_name'] ?? false;
@@ -23,7 +23,7 @@ if($todoName){
         $jsonArray = [];
     }
     //Add a new todo in the array
-    $jsonArray[$todoName] = ['completed' => 'false'];
+    $jsonArray[$todoName] = ['completed' => false];
 
     
     //var_dump($json_decoded);
