@@ -28,7 +28,7 @@ if(file_exists('todo.json')){
 
             <form style="display: inline;" action='change_status.php' method='post'>
                 <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
-                <input type='checkbox' <?php echo    $todo['completed'] === 'true' ? 'checked' : '' ?> >
+                <input type='checkbox' <?php echo    $todo['completed'] === true ? 'checked' : '' ?> >
             </form>
 
             <?php echo $todoName;?>
