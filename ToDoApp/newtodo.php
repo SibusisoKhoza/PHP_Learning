@@ -1,3 +1,7 @@
+<!-- 
+This file is adding todo items to the JSON file and decode them.
+-->
+
 <?php
 echo '<pre>';
 echo var_dump($_POST);
@@ -7,7 +11,7 @@ $todoName = $_POST['todo_name'] ?? false;
 $todoName = trim($todoName);
 
 if($todoName){
-
+    if (file_exists('todo.json')){
     //Get the JSON file contents
     $json = file_get_contents('todo.json');
 
@@ -15,6 +19,9 @@ if($todoName){
 
     //Decode the JSON file into an associative PHP array
     $jsonArray = json_decode($json, true);
+    } else {
+        $jsonArray = [];
+    }
     //Add a new todo in the array
     $jsonArray[$todoName] = ['completed' => 'false'];
 
@@ -28,3 +35,5 @@ if($todoName){
 } else {
     echo "No new to do set";
 }
+
+header('Location: index.php');
