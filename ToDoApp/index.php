@@ -1,3 +1,15 @@
+
+<?php
+$todos = [];
+if(file_exists('todo.json')){
+    $json = file_get_contents('todo.json');
+    $todos = json_decode($json, true);
+}else{
+    echo "No to do list";
+}
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,5 +22,13 @@
         <input type="text" name="todo_name" placeholder="Enter a new task">
         <button type="submit">Add New Task</button>
     </form>
+
+    <?php foreach ($todos as $todoName => $todo): ?>
+        <input type='checkbox' <?php echo $todo['completed'] === 'true' ? 'checked' : '' ?> >
+        <?php echo $todoName;?>
+        <button>Delete</button><br>
+       
+
+    <?php endforeach; ?>
 </body>
 </html>
