@@ -1,0 +1,20 @@
+{
+    "Todo 1": {
+        "completed": true
+    },
+    "Todo 2": {
+        "completed": true
+    },
+    "Washing": {
+        "completed": "false"
+    },
+    "text": {
+        "completed": "false"
+    },
+    "testing": {
+        "completed": "false"
+    },
+    "anothertask": {
+        "completed": "false"
+    }
+}

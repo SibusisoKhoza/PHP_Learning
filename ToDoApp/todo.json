@@ -1,17 +1,17 @@
 {
     "anothertask": {
-        "completed": "true"
+        "completed": true
     },
     "anothertask1": {
-        "completed": "true"
+        "completed": true
     },
-    "test": {
-        "completed": "false"
+    "new": {
+        "completed": false
     },
-    "Sbuda": {
-        "completed": "false"
+    "Do washing": {
+        "completed": false
     },
-    "tes": {
-        "completed": "false"
+    "Pack bags": {
+        "completed": false
     }
 }
