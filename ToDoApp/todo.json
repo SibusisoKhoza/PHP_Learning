@@ -1,14 +1,8 @@
 {
     "anothertask": {
-        "completed": true
-    },
-    "anothertask1": {
-        "completed": true
-    },
-    "new": {
         "completed": false
     },
-    "Do washing": {
+    "anothertask1": {
         "completed": false
     },
     "Pack bags": {

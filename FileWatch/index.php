@@ -5,3 +5,7 @@ $currentTime = filemtime($path);
 
 var_dump($path);
 var_dump($currentTime);
+
+while ($path) {
+    # code...
+}
